@@ -1,0 +1,116 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+:root {
+    --black: #000000;
+    --black-second: #353535;
+    --blue-first: #0cbccc;
+    --blue-second: #008B8B;
+    --gray: #97978f;
+    --white: #ffffff;
+}
+
+
+.navbar .navbar__container {
+    align-items: center;
+    background-color: var(--blue-first);
+    column-gap: 5px;
+    display: flex;
+    justify-content: end;
+    height: 50px;
+    padding-right: 15px;
+}
+
+.navbar .navbar__container .navbar__container-item {
+    list-style: none;
+    height: 100%;
+}
+
+
+.navbar .navbar__container .navbar__container-item a {
+    align-items: center;
+    display: flex;
+    color: var(--black);
+    text-decoration: none;
+    height: 100%;
+    padding: 0 10px;
+    transition: all 300ms ease-out;
+}
+
+.navbar .navbar__container .navbar__container-item a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: var(--blue-second);
+}
+
+.block__content {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.block__content .container__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    max-width: 350px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--black-second);
+    border-radius: 5px;
+    box-shadow: 5px 5px var(--gray);
+}
+
+.block__content .container__form .block__content--icon {
+    background-color: var(--white);
+    top: -50px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.block__content .container__form .container__form--content p {
+    display: flex;
+    justify-content: space-between;
+    width: 265px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.block__content .container__form .container__form--content p input {
+    height: 20px;
+}
+
+.block__content .container__form .container__form--content button {
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: var(--blue-first);
+    border: unset;
+    width: 100%;
+    height: 40px;
+    transition: all 300ms ease-out;
+    font-size: 18px;
+}
+
+.block__content .container__form .container__form--content button:hover {
+    text-decoration: underline;
+    background-color: var(--blue-second);
+}
+
+.block__content.block__signup .container__form .container__form--content p span {
+    display: none;
+}
+
+.block__content.block__signup .container__form .container__form--content ul {
+    display: none;
+}
