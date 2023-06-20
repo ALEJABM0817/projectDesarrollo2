@@ -114,3 +114,30 @@
 .block__content.block__signup .container__form .container__form--content ul {
     display: none;
 }
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  
+  .select-multiple {
+    width: 150px;
+    height: 100px;
+    margin: 0 auto; /* Alineamos horizontalmente el selector múltiple */
+    display: block; /* Hacemos que el selector sea un bloque */
+  }
+  
+  .valor-servicio {
+    margin-top: 100px;
+    display: block; /* Hacemos que el botón sea un bloque */
+  }
+  
+  .mi-total {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
