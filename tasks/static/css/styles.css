@@ -115,29 +115,50 @@
     display: none;
 }
 
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .formulario {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 50vh;
-  }
-  
-  .select-multiple {
+}
+
+.formulario2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 50vh;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.checkbox-servicios, .radio-eventos {
     width: 150px;
     height: 100px;
-    margin: 0 auto; /* Alineamos horizontalmente el selector múltiple */
-    display: block; /* Hacemos que el selector sea un bloque */
-  }
-  
-  .valor-servicio {
+    display: block;
+}
+
+.valor-servicio {
     margin-top: 100px;
-    display: block; /* Hacemos que el botón sea un bloque */
-  }
-  
-  .mi-total {
+    display: block;
+}
+
+.mi-total-servicios {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-  }
-  
+}
+
+.valor-eventos {
+    margin-top: 100px;
+    display: block;
+    margin-left: 100px;
+}
