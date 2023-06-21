@@ -14,7 +14,7 @@ def create_service(nombre, precio):
 if __name__ == "__main__":
     create_service("DJ", 100.0)
     create_service("Hora Loca", 50.0)
-    create_service("Utilería ", 50.0)
+    create_service("Utilería", 50.0)
     create_service("Decoración", 200.0)
     create_service("Meseros", 150.0)
     create_service("Bar", 80.0)
