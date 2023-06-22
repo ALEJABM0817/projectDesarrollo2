@@ -115,11 +115,6 @@
     display: none;
 }
 
-.form-container {
-    display: flex;
-    justify-content: space-between;
-}
-
 .formulario {
     flex: 1;
     display: flex;
@@ -129,21 +124,14 @@
     height: 50vh;
 }
 
-.formulario2 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 50vh;
-    margin-top: 20px;
-    margin-left: 10px;
-}
 
-.checkbox-servicios, .radio-eventos {
+
+.checkbox-servicios, .radio-eventos, .checkbox-alimentos {
+    float: left;
     width: 150px;
     height: 100px;
-    display: block;
+    margin-right: 10px; 
+    
 }
 
 .valor-servicio {
@@ -161,4 +149,45 @@
     margin-top: 100px;
     display: block;
     margin-left: 100px;
+}
+
+.valor-alimentos {
+    margin-top: 100px;
+    display: block;
+    margin-left: 100px;
+}
+
+.mi-total-eventos {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.mi-total-alimentos {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.mi-total-general {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.calcular-total {
+    margin-top: 100px;
+    display: block;
+    margin-left: 100px;
+}
+
+.cuadroDescriptivo {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.descripcionAlimento {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
 }
