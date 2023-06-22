@@ -115,79 +115,63 @@
     display: none;
 }
 
+
+
+
+/* Contenedor principal 
 .formulario {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 50vh;
-}
-
-
-
-.checkbox-servicios, .radio-eventos, .checkbox-alimentos {
-    float: left;
+    justify-content: center;
+    text-align: center;
+  }
+  */
+  
+  /* Selectores */
+  .checkbox-servicios,
+  .radio-eventos,
+  .checkbox-alimentos {
+    display: inline-block;
     width: 150px;
     height: 100px;
-    margin-right: 10px; 
-    
-}
-
-.valor-servicio {
-    margin-top: 100px;
+    margin: 10px;
+  }
+  
+  /* Total de servicios */
+  .valor-servicio {
+    margin-top: 20px;
+  }
+  
+  .mi-total-servicios,
+  .mi-total-eventos,
+  .mi-total-alimentos,
+  .mi-total-general {
+    margin-top: 20px;
+  }
+  
+  /* Botón calcular */
+  .calcular-total {
+    margin-top: 20px;
+  }
+  
+  /* Cuadro descriptivo */
+  .cuadroDescriptivo {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .descripcionAlimento {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .label {
     display: block;
-}
-
-.mi-total-servicios {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.valor-eventos {
-    margin-top: 100px;
-    display: block;
-    margin-left: 100px;
-}
-
-.valor-alimentos {
-    margin-top: 100px;
-    display: block;
-    margin-left: 100px;
-}
-
-.mi-total-eventos {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.mi-total-alimentos {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.mi-total-general {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.calcular-total {
-    margin-top: 100px;
-    display: block;
-    margin-left: 100px;
-}
-
-.cuadroDescriptivo {
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.descripcionAlimento {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-}
+    font: 1rem 'Fira Sans', sans-serif;
+    margin: 0.4rem 0;
+  }
+  

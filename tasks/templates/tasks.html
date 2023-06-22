@@ -90,11 +90,7 @@
             <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
             {% endfor %}
             {% for alimentos in alimentos_j1 %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Jugo1: Maracuyá')">
-            <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
-            {% endfor %}
-            {% for alimentos in alimentos_j2 %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'jugo2: Lulo ')">
+            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Jugo: Maracuyá, Lulo, Mora')">
             <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
             {% endfor %}
             {% for alimentos in alimentos_l %}
@@ -114,6 +110,10 @@
             <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
             {% endfor %}
         </div>
+        <label for="Personas">Cantidad de personas (10-200):</label>
+        <input type="number" id="Personas" name="Personas"
+              min="10" max="200" value = "10">
+
         <input type="submit" class="valor-alimentos" value="Calcular total alimentos">
         <input type="submit" class="calcular-total" value="Calcular total general">
 

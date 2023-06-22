@@ -86,8 +86,7 @@ def selector(request):
     alimentos_e2 = Alimentos.objects.filter(nombre='Plato2')
     alimentos_c1 = Alimentos.objects.filter(nombre='Comida Rápida1')
     alimentos_c2 = Alimentos.objects.filter(nombre='Comida Rápida2')
-    alimentos_j1 = Alimentos.objects.filter(nombre='Jugo1')
-    alimentos_j2 = Alimentos.objects.filter(nombre='Jugo2')
+    alimentos_j1 = Alimentos.objects.filter(nombre='Jugo')
     alimentos_l = Alimentos.objects.filter(nombre='Limonada')
     alimentos_g = Alimentos.objects.filter(nombre='Gaseosa')
     alimentos_l2 = Alimentos.objects.filter(nombre='Licores')
@@ -108,7 +107,8 @@ def selector(request):
         for alimentos_id in alimentos_seleccionados:
             alimentos = Alimentos.objects.get(pk=alimentos_id)
             total_alimentos += alimentos.precio
-    
+    cantidad_personas = int(request.POST.get('Personas', 10))
+    total_alimentos *= cantidad_personas
     total_general = str(total_servicios + total_eventos + total_alimentos)
     
     context = {
@@ -132,7 +132,6 @@ def selector(request):
         'alimentos_c1': alimentos_c1,
         'alimentos_c2': alimentos_c2,
         'alimentos_j1': alimentos_j1,
-        'alimentos_j2': alimentos_j2,
         'alimentos_l': alimentos_l,
         'alimentos_g': alimentos_g,
         'alimentos_l2': alimentos_l2,
