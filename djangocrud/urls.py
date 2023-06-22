@@ -27,4 +27,5 @@ urlpatterns = [
     path('logout/', views.cerrarS, name='logout'),
     path('signin/', views.signin, name='signin'),
     path('calendario/', calendarioU),
+    path('selector/', views.selector, name='selector'),
 ]
