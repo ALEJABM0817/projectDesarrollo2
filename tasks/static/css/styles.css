@@ -10,6 +10,7 @@
     --blue-second: #008B8B;
     --gray: #97978f;
     --white: #ffffff;
+    --yellow: hsl(45, 100%, 50%);
 }
 
 .navbar {
@@ -20,7 +21,7 @@
 
 .navbar .navbar__container {
     align-items: center;
-    background-color: var(--blue-first);
+    background-color: var(--black);
     column-gap: 5px;
     display: flex;
     justify-content: end;
@@ -42,6 +43,7 @@
 }
 
 .navbar .navbar__container .proyectname {
+    color: var(--yellow);
     padding-left: 10px;
     font-weight: bold;
     font-size: 18px;
@@ -56,7 +58,7 @@
 .navbar .navbar__container .navbar__container-item a {
     align-items: center;
     display: flex;
-    color: var(--black);
+    color: var(--yellow);
     text-decoration: none;
     height: 100%;
     padding: 0 10px;
@@ -66,7 +68,7 @@
 .navbar .navbar__container .navbar__container-item a:hover {
     cursor: pointer;
     text-decoration: underline;
-    background-color: var(--blue-second);
+    background-color: var(--white);
 }
 
 .block__content {
@@ -118,7 +120,7 @@
 .block__content .container__form .container__form--content button {
     cursor: pointer;
     margin-top: 20px;
-    background-color: var(--blue-first);
+    background-color: var(--yellow);
     border: unset;
     width: 100%;
     height: 40px;
@@ -128,7 +130,8 @@
 
 .block__content .container__form .container__form--content button:hover {
     text-decoration: underline;
-    background-color: var(--blue-second);
+    color: var(--white);
+    background-color: var(--black);
 }
 
 .block__content.block__signup .container__form .container__form--content p span {
