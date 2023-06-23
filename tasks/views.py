@@ -25,7 +25,7 @@ def signup(request):
                 )
                 user.save()
                 login(request, user)
-                return redirect('tasks')
+                return redirect('selector')
             except IntegrityError:
                 return render(request, 'signup.html', {
                 'form': UserCreationForm,
@@ -59,7 +59,7 @@ def signin(request):
     })
         else:
             login(request, user)
-            return redirect ('tasks')
+            return redirect ('selector')
         
 def selector(request):
     servicios = Servicio.objects.all()

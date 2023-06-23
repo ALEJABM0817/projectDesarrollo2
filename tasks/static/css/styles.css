@@ -12,6 +12,11 @@
     --white: #ffffff;
 }
 
+.navbar {
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
 
 .navbar .navbar__container {
     align-items: center;
@@ -21,6 +26,25 @@
     justify-content: end;
     height: 50px;
     padding-right: 15px;
+    position: relative;
+}
+
+.navbar .navbar__logo {
+    position: absolute;
+    left: 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar__container .logo {
+    height: 100%;
+}
+
+.navbar .navbar__container .proyectname {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .navbar .navbar__container .navbar__container-item {
@@ -127,51 +151,157 @@
     text-align: center;
   }
   */
-  
-  /* Selectores */
-  .checkbox-servicios,
-  .radio-eventos,
-  .checkbox-alimentos {
+
+/* Selectores */
+.checkbox-servicios,
+.radio-eventos,
+.checkbox-alimentos {
     display: inline-block;
     width: 150px;
     height: 100px;
     margin: 10px;
-  }
-  
-  /* Total de servicios */
-  .valor-servicio {
+}
+
+/* Total de servicios */
+.valor-servicio {
     margin-top: 20px;
-  }
-  
-  .mi-total-servicios,
-  .mi-total-eventos,
-  .mi-total-alimentos,
-  .mi-total-general {
+}
+
+.mi-total-servicios,
+.mi-total-eventos,
+.mi-total-alimentos,
+.mi-total-general {
     margin-top: 20px;
-  }
-  
-  /* Botón calcular */
-  .calcular-total {
+}
+
+/* Botón calcular */
+.calcular-total {
     margin-top: 20px;
-  }
-  
-  /* Cuadro descriptivo */
-  .cuadroDescriptivo {
+}
+
+/* Cuadro descriptivo */
+.cuadroDescriptivo {
     background-color: #f5f5f5;
     border: 1px solid #ccc;
     padding: 10px;
     margin-top: 10px;
-  }
-  
-  .descripcionAlimento {
+}
+
+.descripcionAlimento {
     font-weight: bold;
     color: #333;
     margin-bottom: 5px;
-  }
-  
-  .label {
+}
+
+.label {
     display: block;
     font: 1rem 'Fira Sans', sans-serif;
     margin: 0.4rem 0;
-  }
-  
+}
+
+.eventos__container {
+    padding: 25px;
+    padding-top: 0;
+}
+
+.eventos__container .eventos__title {
+    text-align: center;
+    margin: 35px 0;
+}
+
+.eventos__container .eventos__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.eventos__salon {
+    box-shadow: 0 2px 8px #00000026;
+    border-radius: 0.5rem;
+    transition: box-shadow .2s;
+    max-width: 24%;
+    min-width: 200px;
+    width: 100%;
+}
+
+.eventos__salon:hover {
+    box-shadow: 0 5px 12px #0003;
+}
+
+.eventos__salon .eventos__img {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+    height: 170px;
+    width: 100%;
+}
+
+.eventos__salon .eventos__first--img {
+    background-image: url("../media/boda.jpg");
+}
+
+.eventos__salon .eventos__second--img {
+    background-image: url("../media/quince.jpg");
+}
+
+.eventos__salon .eventos__three--img {
+    background-image: url("../media/reunion.png");
+}
+
+.eventos__salon .eventos__four--img {
+    background-image: url("../media/grado.jpg");
+}
+
+.eventos__salon .eventos__salon--text {
+    font-size: 18px;
+}
+
+.eventos__salon .eventos__salon--content {
+    padding: 16px;
+}
+
+.eventos__salon .servicios__first--img {
+    background-image: url("../media/platos.jpg");
+}
+
+.eventos__salon .servicios__second--img {
+    background-image: url("../media/bebidas.png");
+}
+
+.eventos__salon .servicios__three--img {
+    background-image: url("../media/snacks.jpg");
+}
+
+.eventos__salon .especiales__first--img {
+    background-image: url("../media/dj.jpeg");
+}
+
+.eventos__salon .especiales__second--img {
+    background-image: url("../media/decoracion.jpeg");
+}
+
+.eventos__salon .especiales__three--img {
+    background-image: url("../media/bar.png");
+}
+
+.eventos__salon .especiales__four--img {
+    background-image: url("../media/meseros.jpg");
+}
+
+.eventos__reserva {
+    text-align: center;
+    margin: 35px 0;
+    font-size: 20px;
+}
+
+.eventos__reserva--text a {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+.eventos__reserva--text a:hover {
+    cursor: pointer;
+}

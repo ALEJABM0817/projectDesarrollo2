@@ -10,31 +10,31 @@
 <body>
     <nav class="navbar">
         <ul class="navbar__container">
+            <div class="navbar__logo">
+                <img class="logo" src="{% static 'media/logo.jpg' %}" />
+                <span class="proyectname">Even Hall</span>
+            </div>
             <li class="navbar__container-item">
-                <a href="/">Home</a>
+                <a href="/">Inicio</a>
             </li>
-            <li class="navbar__container-item">
-                <a href="/tasks">Tasks</a>
-            </li>
-           
             {% if user.is_authenticated %}
             <li class="navbar__container-item">
-                <a href="/logout">Logout</a>
-            </li>
-            {% else %}
-            <li class="navbar__container-item">
-                <a href="/signup">Sign up</a>
-            </li>
-            <li class="navbar__container-item">
-                <a href="/signin">Login</a>
+                <a href="/selector">Reservas</a>
             </li>
             <li class="navbar__container-item">
                 <a href="/calendario">Calendario</a>
             </li>
-            
-
+            <li class="navbar__container-item">
+                <a href="/logout">Cerrar Sesión</a>
+            </li>
+            {% else %}
+            <li class="navbar__container-item">
+                <a href="/signup">Registrarse</a>
+            </li>
+            <li class="navbar__container-item">
+                <a href="/signin">Iniciar Sesión</a>
+            </li>
             {% endif %}
-            
         </ul>
     </nav>
    

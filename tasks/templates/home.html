@@ -1,15 +1,91 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Home</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-     Voluptate ab tenetur quidem hic delectus nemo doloribus holita
-     minus dicta nostrum natus rem amet voluptas dolore mollitia ad,
-      expedita sint, eligendi reiciendis blanditiis sequi libero exercitationem?
-       Enim doloremque rerum, vitae eligendi magni expedita reprehenderit? Accusantium
-        sit id eveniet, ullam deleniti dolore quisquam expedita. Omnis sunt aut neque quas
-         vero distinctio aspernatur cumque soluta nulla pariatur placeat quam porro ipsam, 
-         nobis velit corporis fugit quidem unde obcaecati modi animi ratione deserunt rem 
-         est! Ut harum velit molestiae aut. Magnam quod eligendi, dolore neque illum assumenda 
-         adipisci error eveniet, fuga maiores vitae. Beatae, ullam.</p>
+{% load static %}
+<div class="eventos__container">
+     <h1 class="eventos__title">Eventos</h1>
+     <div class="eventos__body">
+          <div class="eventos__salon">
+              <div class="eventos__img eventos__first--img"></div>
+               <div class="eventos__salon--content">
+                    <p class="eventos__salon--text">Bodas</p>
+               </div>
+          </div>
+          <div class="eventos__salon">
+              <div class="eventos__img eventos__second--img"></div>
+               <div class="eventos__salon--content">
+                    <p class="eventos__salon--text">Cumpleaños / Quince años</p>
+               </div>
+          </div>
+          <div class="eventos__salon">
+              <div class="eventos__img eventos__three--img"></div>
+               <div class="eventos__salon--content">
+                    <p class="eventos__salon--text">Reuniones Ejecutivas</p>
+               </div>
+          </div>
+          <div class="eventos__salon">
+              <div class="eventos__img eventos__four--img"></div>
+               <div class="eventos__salon--content">
+                    <p class="eventos__salon--text">Grados</p>
+               </div>
+          </div>
+     </div>
+
+     <h1 class="eventos__title">Servicios</h1>
+     <div class="eventos__body">
+          <div class="eventos__salon">
+              <div class="eventos__img servicios__first--img"></div>
+               <div class="eventos__salon--content">
+                    <p class="eventos__salon--text">Platos</p>
+               </div>
+          </div>
+          <div class="eventos__salon">
+              <div class="eventos__img servicios__second--img"></div>
+               <div class="eventos__salon--content">
+                    <p class="eventos__salon--text">Bebidas</p>
+               </div>
+          </div>
+          <div class="eventos__salon">
+              <div class="eventos__img servicios__three--img"></div>
+               <div class="eventos__salon--content">
+                    <p class="eventos__salon--text">Snacks</p>
+               </div>
+          </div>
+     </div>
+
+     <h1 class="eventos__title">Servicios Especiales</h1>
+     <div class="eventos__body">
+          <div class="eventos__salon">
+              <div class="eventos__img especiales__first--img"></div>
+               <div class="eventos__salon--content">
+                    <p class="eventos__salon--text">Dj / Hora Loca</p>
+               </div>
+          </div>
+          <div class="eventos__salon">
+              <div class="eventos__img especiales__second--img"></div>
+               <div class="eventos__salon--content">
+                    <p class="eventos__salon--text">Decoración / Utilería</p>
+               </div>
+          </div>
+          <div class="eventos__salon">
+              <div class="eventos__img especiales__three--img"></div>
+               <div class="eventos__salon--content">
+                    <p class="eventos__salon--text">Bar</p>
+               </div>
+          </div>
+          <div class="eventos__salon">
+               <div class="eventos__img especiales__four--img"></div>
+                <div class="eventos__salon--content">
+                     <p class="eventos__salon--text">Meseros</p>
+                </div>
+           </div>
+     </div>
+
+     {% if not user.is_authenticated %}
+     <div class="eventos__reserva">
+          <span class="eventos__reserva--text">Haz tu reserva aquí <a href="/signin">Iniciando Sesión</a> ó <a href="/signup">Registrandote</a></span>
+     </div>
+     {% endif %}
+</div>
+
 {% endblock %}
