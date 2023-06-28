@@ -68,7 +68,8 @@
 .navbar .navbar__container .navbar__container-item a:hover {
     cursor: pointer;
     text-decoration: underline;
-    background-color: var(--white);
+    background-color: var(--yellow);
+    color: var( --black);
 }
 
 .block__content {
@@ -95,6 +96,10 @@
     border: 1px solid var(--black-second);
     border-radius: 5px;
     box-shadow: 5px 5px var(--gray);
+}
+
+.block__content .container__form.register {
+    max-height: 480px;
 }
 
 .block__content .container__form .block__content--icon {
@@ -222,7 +227,7 @@
 .eventos__salon {
     box-shadow: 0 2px 8px #00000026;
     border-radius: 0.5rem;
-    transition: box-shadow .2s;
+    transition: all .3s;
     max-width: 24%;
     min-width: 200px;
     width: 100%;
@@ -230,6 +235,7 @@
 
 .eventos__salon:hover {
     box-shadow: 0 5px 12px #0003;
+    scale: 1.05;
 }
 
 .eventos__salon .eventos__img {

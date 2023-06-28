@@ -6,6 +6,7 @@ from django.db import IntegrityError
 from tasks.models import Servicio
 from tasks.models import Eventos
 from tasks.models import Alimentos
+from .forms import RegisterUserForm
 
 # Create your views here.
 def home (request):
@@ -15,7 +16,7 @@ def signup(request):
  
     if request.method == 'GET':
         return render(request, 'signup.html', {
-        'form': UserCreationForm
+        'form': RegisterUserForm
         })
     else:
         if request.POST['password1'] == request.POST['password2']:
@@ -28,11 +29,11 @@ def signup(request):
                 return redirect('selector')
             except IntegrityError:
                 return render(request, 'signup.html', {
-                'form': UserCreationForm,
+                'form': RegisterUserForm,
                  "error": 'El usuario ya existe'
             })
     return render(request, 'signup.html', {
-        'form': UserCreationForm,
+        'form': RegisterUserForm,
         "error": 'Las contraseñas no coinciden'
             })
 
