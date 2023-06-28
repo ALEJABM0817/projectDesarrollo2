@@ -8,6 +8,16 @@
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
+          events: [   
+            {% for reservas in reservas %}
+              {
+                title: "{{reservas.titulo}}",
+                start: "{{reservas.fecha}}"
+              },
+            {%endfor%}
+            
+
+          ],
           initialView: 'dayGridMonth'
         });
         calendar.render();
