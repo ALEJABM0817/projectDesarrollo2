@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load static %}
+<head>
+  <script src="{% static 'js/calendar.js' %}"></script>
+</head>
 <h1>Reservas</h1>
+ 
 <form class= 'formulario' method="post" action="{% url 'selector' %}">
         {% csrf_token %}
       <div class="selector__body">
@@ -163,19 +168,22 @@
             }
           </script>
         </div> 
-          <div class="selector__body">
+          <div class="selector__body save__event">
             <div class="selector__cuadro">
              <form action="https://example.com">
              <label>
                Elige el titulo del evento:
-              <input type="text">
+              <input id="save__title" type="text">
               </label><br>
               <label>
               .Elige la fecha del evento:
-              <input type="date" name="event" />
+              <input id="save__date" type="date" name="event" />
               </label><br>
+
+              <p class="error"></p>
+              <p class="exito"></p>
       
-             <p><button>Finalizar</button></p>
+             <p><button id="save__button" type="submit">Finalizar</button></p>
               </form> 
             </div>
           </div>

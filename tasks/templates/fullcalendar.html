@@ -2,65 +2,16 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
+    {% load static %}
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <script src="{% static 'js/calendar.js' %}"></script>
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
+        let datesStorege = JSON.parse(localStorage.getItem('dates')) || [];
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          events: [ 
-          {
-            title: "Cumpleaños ana",
-            start: "2023-06-07",
-            },
-            {
-            title: "Cena ejecutiva",
-            start: "2023-06-30",
-            },
-            {
-            title: "Quinces Lina",
-            start: "2023-06-28",
-            },
-            {
-            title: "Graduación 2023",
-            start: "2023-06-29",
-            },
-            {
-            title: "Bautizo",
-            start: "2023-06-15",
-            },
-            {
-            title: "ejecutivo",
-            start: "2023-06-01",
-            },
-            {
-            title: "Cumpleaños",
-            start: "2023-06-25",
-            },
-            {
-            title: "Quinceaños",
-            start: "2023-06-03",
-            },
-            {
-            title: "Cumpleaños",
-            start: "2023-06-17",
-            },
-            {
-            title: "Boda",
-            start: "2023-06-14",
-            },
-            {
-            title: "Fiesta",
-            start: "2023-06-20",
-            },
-            {
-            title: "Evento",
-            start: "2023-05-28",
-            },
-
-        
-            
-          ],
+          events: datesStorege,
           initialView: 'dayGridMonth'
         });
         calendar.render();

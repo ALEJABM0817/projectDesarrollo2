@@ -176,6 +176,16 @@
     padding: 16px;
 }
 
+.selector__body .error {
+    background-color: red;
+    color: white;
+}
+
+.selector__body .exito {
+    background-color: green;
+    color: white;
+}
+
 .selector__eventos {
     box-shadow: 0 2px 8px #00000026;
     border-radius: 0.5rem;
