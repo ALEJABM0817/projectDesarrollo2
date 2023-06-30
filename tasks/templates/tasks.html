@@ -119,8 +119,19 @@
 
         <div id="cuadroDescriptivo" style="display: none;">
             <p id="descripcionAlimento"></p>
-          </div>
+          </div><br><br><br><br><br><br><br>
+          <form action="https://example.com">
+            <label>
+              Elige el titulo del evento:
+              <input type="text">
+            </label><br>
+            <label>
+              .Elige la fecha del evento:
+              <input type="date" name="event" />
+            </label><br>
           
+            <p><button>Finalizar</button></p>
+          </form>
           <script>
             function mostrarCuadroDescriptivo(alimentoId, descripcion) {
               var checkBox = document.getElementById("alimentos" + alimentoId);

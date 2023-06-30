@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from django.views import View
-from django.http import JsonResponse
 from tasks.models import reservas
 
 def calendarioU(request):
@@ -9,3 +7,7 @@ def calendarioU(request):
 def listarReservas(request):
     Reservas = reservas.objects.all()
     return render(request, "fullcalendar.html", {"reservas": Reservas})
+
+def prueba(request):
+    Reservas = reservas.objects.all()
+    return render(request, "prueba.html", {'reservas': Reservas})

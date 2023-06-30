@@ -8,15 +8,44 @@
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          events: [   
-            {% for reservas in reservas %}
-              {
-                title: "{{reservas.titulo}}",
-                start: "{{reservas.fecha}}"
-              },
-            {%endfor%}
+          events: [ 
+            {
+            title: "Bautizo",
+            start: "2023-06-15",
+            },
+            {
+            title: "ejecutivo",
+            start: "2023-06-01",
+            },
+            {
+            title: "Cumpleaños",
+            start: "2023-06-25",
+            },
+            {
+            title: "Quinceaños",
+            start: "2023-06-03",
+            },
+            {
+            title: "Cumpleaños",
+            start: "2023-06-17",
+            },
+            {
+            title: "Boda",
+            start: "2023-06-14",
+            },
+            {
+            title: "Fiesta",
+            start: "2023-06-20",
+            },
+            {
+            title: "Evento",
+            start: "2023-05-28",
+            },
+            {
+            title: "Prueba DS2",
+            start: "2023-07-12",
+            }
             
-
           ],
           initialView: 'dayGridMonth'
         });

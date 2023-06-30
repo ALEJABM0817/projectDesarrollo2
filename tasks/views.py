@@ -142,8 +142,9 @@ def selector(request):
         'total_eventos': total_eventos,
         'total_general': total_general
     }
+#--------------------------------------------------------------------------------------------------------------------
+    
     return render(request, 'tasks.html', context)
-        
 
 
 
