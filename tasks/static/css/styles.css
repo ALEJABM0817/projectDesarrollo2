@@ -195,23 +195,6 @@
     width: 100%;
 }
 
-/* Total de servicios */
-.valor-servicio {
-    margin-top: 20px;
-}
-
-.mi-total-servicios,
-.mi-total-eventos,
-.mi-total-alimentos,
-.mi-total-general {
-    margin-top: 20px;
-}
-
-/* Botón calcular */
-.calcular-total {
-    margin-top: 20px;
-}
-
 /* Cuadro descriptivo */
 .selector__body .selector__cuadro {
     box-shadow: 0 2px 8px #00000026;
