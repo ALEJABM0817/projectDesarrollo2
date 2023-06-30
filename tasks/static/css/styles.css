@@ -122,7 +122,7 @@
     height: 20px;
 }
 
-.block__content .container__form .container__form--content button {
+.block__content .container__form .container__form--content button, .selector__body [type="submit"] {
     cursor: pointer;
     margin-top: 20px;
     background-color: var(--yellow);
@@ -133,10 +133,16 @@
     font-size: 18px;
 }
 
-.block__content .container__form .container__form--content button:hover {
+.block__content .container__form .container__form--content button:hover, .selector__body [type="submit"]:hover {
     text-decoration: underline;
     color: var(--white);
     background-color: var(--black);
+}
+
+.selector__body [type="submit"] {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .block__content.block__signup .container__form .container__form--content p span {
