@@ -147,4 +147,3 @@ def selector(request):
     return render(request, 'tasks.html', context)
 
 
-

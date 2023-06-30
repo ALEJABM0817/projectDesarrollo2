@@ -148,26 +148,51 @@
 }
 
 
-
-
-/* Contenedor principal 
 .formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  */
+    padding: 25px;
+    padding-top: 0;
+}
 
+
+.formulario .selector__body {
+    color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.selector__eventos .selector__eventos--text  {
+    font-size: 18px;
+}
+
+.selector__eventos .selector__eventos--content {
+    padding: 16px;
+}
+
+.selector__eventos {
+    box-shadow: 0 2px 8px #00000026;
+    border-radius: 0.5rem;
+    transition: all .3s;
+    max-width: 24%;
+    min-width: 200px;
+    width: 100%;
+}
+.eventos__salon:hover {
+    box-shadow: 0 5px 12px #0003;
+    scale: 1.05;
+}
 /* Selectores */
-.checkbox-servicios,
+.checkbox-servicios
 .radio-eventos,
 .checkbox-alimentos {
-    display: inline-block;
-    width: 150px;
-    height: 100px;
-    margin: 10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+    height: 170px;
+    width: 100%;
 }
 
 /* Total de servicios */
@@ -188,17 +213,22 @@
 }
 
 /* Cuadro descriptivo */
-.cuadroDescriptivo {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
+.selector__body .selector__cuadro {
+    box-shadow: 0 2px 8px #00000026;
+    border-radius: 0.5rem;
+    transition: all .3s;
+    max-width: 24%;
+    min-width: 200px;
+    width: 100%;
 }
 
 .descripcionAlimento {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+    box-shadow: 0 2px 8px #00000026;
+    border-radius: 0.5rem;
+    transition: all .3s;
+    max-width: 24%;
+    min-width: 200px;
+    width: 100%;
 }
 
 .label {
