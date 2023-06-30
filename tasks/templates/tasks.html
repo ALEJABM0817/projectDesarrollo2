@@ -4,120 +4,147 @@
 <h1>Reservas</h1>
 <form class= 'formulario' method="post" action="{% url 'selector' %}">
         {% csrf_token %}
-        
-        <div class="checkbox-servicios">
-            {% for servicio in servicios_dj %}
-            <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
-            <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
-            {% endfor %}
-            
-            {% for servicio in servicios_decoracion %}
-            <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
-            <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
-            {% endfor %}
-            
-            {% for servicio in servicios_hora_loca %}
-            <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
-            <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
-            {% endfor %}
-            
-            {% for servicio in servicios_utileria %}
-            <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
-            <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
-            {% endfor %}
-            
-            {% for servicio in servicios_meseros %}
-            <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
-            <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
-            {% endfor %}
-            
-            {% for servicio in servicios_bar %}
-            <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
-            <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
-            {% endfor %}
+      <div class="selector__body">
+          <div class="selector__eventos">
+            <div class="selector__eventos--content">
+                 <p class="selector__eventos--text">Eventos</p>
+                 {% for eventos in eventos_c %}
+                 <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
+                 <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
+                 {% endfor %}
+                 {% for eventos in eventos_ba %}
+                 <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
+                 <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
+                 {% endfor %}
+                 {% for eventos in eventos_q %}
+                 <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
+                 <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
+                 {% endfor %}
+                 {% for eventos in eventos_bo %}
+                 <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
+                 <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
+                 {% endfor %}
+                 {% for eventos in eventos_fi %}
+                 <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
+                 <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
+                 {% endfor %}
+                 {% for eventos in eventos_g %}
+                 <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
+                 <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
+                 {% endfor %}
+                 {% for eventos in eventos_e %}
+                 <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
+                 <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
+                 {% endfor %}
+                 <input type="submit" class="valor-eventos" value="Calcular total Eventos">
+                 <p class="mi-total-eventos">Total Eventos: {{ total_eventos }}</p>
+            </div>
+      </div>
+     <div class="selector__body">
+          <div class="selector__eventos">
+               <div class="selector__eventos--content">
+                    <p class="selector__eventos--text">Servicios</p>
+                    {% for servicio in servicios_dj %}
+                    <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
+                    <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
+                    {% endfor %}
+                    
+                    {% for servicio in servicios_decoracion %}
+                    <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
+                    <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
+                    {% endfor %}
+                    
+                    {% for servicio in servicios_hora_loca %}
+                    <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
+                    <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
+                    {% endfor %}
+                    
+                    {% for servicio in servicios_utileria %}
+                    <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
+                    <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
+                    {% endfor %}
+                    
+                    {% for servicio in servicios_meseros %}
+                    <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
+                    <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
+                    {% endfor %}
+                    
+                    {% for servicio in servicios_bar %}
+                    <input type="checkbox" id="servicio{{ servicio.id }}" name="servicios" value="{{ servicio.id }}">
+                    <label for="servicio{{ servicio.id }}">{{ servicio.nombre }}</label><br>
+                    {% endfor %}
+                    <input type="submit" class="valor-servicio" value="Calcular total Servicios">
+                    <p class="mi-total-servicios">Total Servicios: {{ total_servicios }}</p>
+               </div>
+          </div>
+      </div>
+      <div class="selector__body">
+          <div class="selector__eventos">
+               <div class="selector__eventos--content">
+                    <p class="selector__eventos--text">Alimentos</p>
+                    {% for alimentos in alimentos_e1 %}
+                    <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}" onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Plato1: carne en rollo, ensalada de vegetales, pan, arroz')">
+                    <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
+                    {% endfor %}
+                    {% for alimentos in alimentos_e2 %}
+                    <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Plato2: filete de pollo, ensalada de papa, arroz')">
+                    <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
+                    {% endfor %}
+                    {% for alimentos in alimentos_c1 %}
+                    <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Comida Rápida1: Hamburguesa')">
+                    <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
+                    {% endfor %}
+                    {% for alimentos in alimentos_c2 %}
+                    <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Comida Rápida2: Perro')">
+                    <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
+                    {% endfor %}
+                    {% for alimentos in alimentos_j1 %}
+                    <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Jugo: Maracuyá, Lulo, Mora')">
+                    <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
+                    {% endfor %}
+                    {% for alimentos in alimentos_l %}
+                    <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Limonada: Coco,Cerezada, Limón')">
+                    <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
+                    {% endfor %}
+                    {% for alimentos in alimentos_g %}
+                    <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Gaseosa: Colombiana, Manzana, Popular')">
+                    <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
+                    {% endfor %}
+                    {% for alimentos in alimentos_l2 %}
+                    <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Licores: Aguardiente, Ron')">
+                    <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
+                    {% endfor %}
+                    {% for alimentos in alimentos_s %}
+                    <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Snacks: Papas, Gomas, Maní')">
+                    <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
+                    {% endfor %}
+                    <input type="submit" class="valor-alimentos" value="Calcular total alimentos">
+                    <p class="mi-total-alimentos">Total Alimentos: {{ total_alimentos }}</p>
+               </div>
+          </div>
+      </div>
+      <div class="selector__body">
+          <div class="selector__eventos">
+               <div class="selector__eventos--content">
+                    <p class="selector__eventos--text">Cantidad de personas</p>
+                    <label for="Personas">Cantidad de personas (10-200):</label>
+                    <input type="number" id="Personas" name="Personas"
+                          min="10" max="200" value = "10">
+               </div>
+          </div>
         </div>
-        
-        <input type="submit" class="valor-servicio" value="Calcular total Servicios">
-
-        <div class="radio-eventos">
-            {% for eventos in eventos_c %}
-            <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
-            <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
-            {% endfor %}
-            {% for eventos in eventos_ba %}
-            <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
-            <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
-            {% endfor %}
-            {% for eventos in eventos_q %}
-            <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
-            <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
-            {% endfor %}
-            {% for eventos in eventos_bo %}
-            <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
-            <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
-            {% endfor %}
-            {% for eventos in eventos_fi %}
-            <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
-            <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
-            {% endfor %}
-            {% for eventos in eventos_g %}
-            <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
-            <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
-            {% endfor %}
-            {% for eventos in eventos_e %}
-            <input type="radio" id="eventos{{ eventos.id }}" name="eventos" value="{{ eventos.id }}">
-            <label for="eventos{{ eventos.id }}">{{ eventos.nombre }}</label><br>
-            {% endfor %}
-        </div>
-        
-        <input type="submit" class="valor-eventos" value="Calcular total Eventos">
-
-        <div class="checkbox-alimentos">
-            {% for alimentos in alimentos_e1 %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}" onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Plato1: carne en rollo, ensalada de vegetales, pan, arroz')">
-            <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
-            {% endfor %}
-            {% for alimentos in alimentos_e2 %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Plato2: filete de pollo, ensalada de papa, arroz')">
-            <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
-            {% endfor %}
-            {% for alimentos in alimentos_c1 %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Comida Rápida1: Hamburguesa')">
-            <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
-            {% endfor %}
-            {% for alimentos in alimentos_c2 %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Comida Rápida2: Perro')">
-            <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
-            {% endfor %}
-            {% for alimentos in alimentos_j1 %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Jugo: Maracuyá, Lulo, Mora')">
-            <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
-            {% endfor %}
-            {% for alimentos in alimentos_l %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Limonada: Coco,Cerezada, Limón')">
-            <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
-            {% endfor %}
-            {% for alimentos in alimentos_g %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Gaseosa: Colombiana, Manzana, Popular')">
-            <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
-            {% endfor %}
-            {% for alimentos in alimentos_l2 %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Licores: Aguardiente, Ron')">
-            <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
-            {% endfor %}
-            {% for alimentos in alimentos_s %}
-            <input type="checkbox" id="alimentos{{ alimentos.id }}" name="alimentos" value="{{ alimentos.id }}"onchange="mostrarCuadroDescriptivo('{{ alimentos.id }}', 'Snacks: Papas, Gomas, Maní')">
-            <label for="alimentos{{ alimentos.id }}">{{ alimentos.nombre }}</label><br>
-            {% endfor %}
-        </div>
-        <label for="Personas">Cantidad de personas (10-200):</label>
-        <input type="number" id="Personas" name="Personas"
-              min="10" max="200" value = "10">
-
-        <input type="submit" class="valor-alimentos" value="Calcular total alimentos">
-        <input type="submit" class="calcular-total" value="Calcular total general">
-
-        <div id="cuadroDescriptivo" style="display: none;">
+        <div class="selector__body">
+          <div class="selector__eventos">
+            <div class="selector__eventos--content">
+                 <p class="selector__eventos--text">Total</p>
+                 <input type="submit" class="calcular-total" value="Calcular total general">
+                 <p class="mi-total-general">Total General: {{ total_general }}</p>
+            </div>
+       </div>
+      </div>
+      <div class="selector__body">
+        <div class="selector__cuadro"> 
+          <div id="cuadroDescriptivo" style="display: none;">
             <p id="descripcionAlimento"></p>
           </div>
           
@@ -135,12 +162,10 @@
               }
             }
           </script>
-                   
+        </div>  
+      </div>           
 </form>
-<p class="mi-total-servicios">Total Servicios: {{ total_servicios }}</p>
-<p class="mi-total-eventos">Total Eventos: {{ total_eventos }}</p>
-<p class="mi-total-alimentos">Total Alimentos: {{ total_alimentos }}</p>
-<p class="mi-total-general">Total General: {{ total_general }}</p>
+
 
 
 {% endblock %}

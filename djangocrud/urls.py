@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path 
 from tasks import views
 from calendario.views import calendarioU
+from calendario.views import prueba
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +29,6 @@ urlpatterns = [
     path('logout/', views.cerrarS, name='cerrar sesión'),
     path('signin/', views.signin, name='iniciar sesión'),
     path('calendario/', calendarioU),
+    path('prueba/', prueba),
     path('selector/', views.selector, name='selector'),
 ]
